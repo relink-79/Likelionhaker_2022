@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 관리페이지</title>
+</head>
+<body>
+    <h1>코드 정리 사이트</h1>
+    <a href="{% url 'new' %}">코드 작성</a>
+
+    {% for person in people %}
+    <div>
+        <h3>
+        {{person.name}}
+        </h3>
+        {{person.pub_date}}
+        <br>
+        {{person.age}}
+        <br>
+        {{person.email}}
+        <br>
+        {{person.summary}}
+        <a href="{% url 'detail' person.id %}">더 보기</a>
+    </div>
+    {% endfor %}
+</body>
+</html>

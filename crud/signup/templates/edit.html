@@ -1,0 +1,10 @@
+<h1>update</h1>
+
+<form action="{% url 'update' person.id %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="name" value="{{person.name}}">
+    <input type="number" name="age" min="10" max="99" step="1" id="" value="{{person.age}}">
+    <input type="email" name="email" placeholder="id@host" value="{{person.email}}">
+    <textarea name="introduce" id="" cols="30" rows="10">{{person.introduce}}</textarea>
+    <input type="submit" value="수정">
+</form>

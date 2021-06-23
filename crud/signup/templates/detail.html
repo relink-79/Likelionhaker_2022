@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세페이지</title>
+</head>
+<body>
+    <h1>{{person.name}}님의 정보</h1>
+    <hr>
+    작성날쨔 : {{person.pub_date}}
+    나이 : {{person.age}}
+    이메일 : {{person.email}}
+    코드내용 : {{person.introduce}}
+
+    <a href="{% url 'edit' person.id %}">수정</a>
+    <a href="{% url 'delete' person.id %}">삭제</a>
+    <a href="{% url 'home' %}"> 홈으로</a>
+</body>
+</html>
