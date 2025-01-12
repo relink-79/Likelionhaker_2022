@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from .models import Signup
 from django.utils import timezone
+import threading
 # Create your views here.
 
 def home(req):
@@ -10,6 +11,10 @@ def home(req):
 
 def new(req):
     return render(req, 'new.html')
+
+def timer(req) :
+    return render(req, 'timer.html')
+
 
 def create(req):
     new_person = Signup()
@@ -42,3 +47,27 @@ def delete(req, id):
     delete_person = get_object_or_404(Signup, pk=id)
     delete_person.delete()
     return redirect('home')
+def abcd(req):
+    Acode_req = req.GET['Acode']
+    Bcode_req = req.GET['Bcode']
+    result = 'result'
+    deresult = 'deresult'
+    Acode_de = Acode_req.replace(" ","")
+    Bcode_de = Bcode_req.replace(" ","")
+    if Acode_req == Bcode_req:
+        result = 'true'
+    else:
+        result = 'false'
+    if Acode_de == Bcode_de:
+        deresult = 'true'
+    else:
+        deresult = 'false'
+    return render(req,'abcd.html',{'Fcode':Acode_req,'Scode':Bcode_req,'result':result,'deresult':deresult})
+def abc(req):
+    return render(req,'abc.html')
+def wisesaying(req):
+    return render(req,'wisesaying.html')
+def display(req):
+    display_req=req.GET['wisesaying']
+    return render(req,'display.html',{'display':display_req})
+    

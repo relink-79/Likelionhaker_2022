@@ -21,9 +21,15 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
     path('new/', new, name="new"),
+    path('timer/', timer, name="timer"),
     path('create/', create, name="create"),
     path('detail/<int:id>', detail, name="detail"),
     path('edit/<int:id>', edit, name="edit"),
     path('update/<int:id>', update, name="update"),
     path('delete/<int:id>', delete, name="delete"),
+    path('abc/', abc ,name="abc"),
+    path('abc/abcd', abcd, name="abcd"),
+    path('wisesaying/',wisesaying ,name="wisesaying"),
+    path('wisesaying/wisesaying',display,name="display"),
 ]
+

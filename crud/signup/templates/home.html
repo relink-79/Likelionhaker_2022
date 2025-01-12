@@ -7,8 +7,13 @@
     <title>회원가입 관리페이지</title>
 </head>
 <body>
+
+    <a href="{% url 'abc' %}">일치확인</a>
+    <a href="{% url 'timer' %}">타이머</a>
     <h1>코드 정리 사이트</h1>
     <a href="{% url 'new' %}">코드 작성</a>
+    <a href="{% url 'wisesaying'%}"> 명언작성 </a>
+    <br>
 
     {% for person in people %}
     <div>

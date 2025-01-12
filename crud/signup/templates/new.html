@@ -13,14 +13,18 @@
         <label for="name">코드 정보 :</label>
         <input type="text" name="name" id="name" cols="10" rows="10">
         <br>
-        <label for="age">나이 :</label>
-        <input type="number" name="age" id="age" min="10" max="99" step="1">
+        <label for="age">오류정보 :</label>
+        <input type="text" name="age" id="age" cols="30" rows="10">
         <br>
         <label for="email">이메일 :</label>
         <input type="email" name="email" id="email" placeholder="id@host">
         <br>
         <label for="introduce">코드내용 :</label>
         <textarea name="introduce" id="introduce" cols="30" rows="10"></textarea>
+         <form method="get" action="form-action.html">
+        <p>인터넷에 코드와 오류를 올려 질문하시겠습니까?</p>
+        <label><input type="checkbox" name="color" value="blue"> Yes</label>
+        <label><input type="checkbox" name="color" value="red"> No</label>
         <input type="submit" value="입력">
     </form>
 </body>
